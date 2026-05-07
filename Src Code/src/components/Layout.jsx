@@ -73,7 +73,7 @@ export default function Layout({ children, activeTab, setActiveTab, isDarkMode, 
   return (
     <div className={`flex h-screen overflow-hidden font-sans transition-colors duration-300 ${isDarkMode ? 'bg-slate-950 text-slate-100 dark' : 'bg-slate-50 text-slate-900'}`}>
       {/* Sidebar */}
-      <aside className={`w-64 flex flex-col transition-colors duration-300 ${isDarkMode ? 'bg-slate-900 border-r border-slate-800' : 'bg-slate-900'}`}>
+      <aside className={`w-20 md:w-64 flex flex-col transition-colors duration-300 ${isDarkMode ? 'bg-slate-900 border-r border-slate-800' : 'bg-slate-900'}`}>
         <div className="p-6 flex items-center space-x-3 text-indigo-400">
           <Orbit className="w-8 h-8" />
           <span className="text-2xl font-bold text-white tracking-wide">SkillOrbit</span>
@@ -159,7 +159,7 @@ export default function Layout({ children, activeTab, setActiveTab, isDarkMode, 
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto flex flex-col">
         {/* Global Top Header */}
-        <header className={`hidden md:flex h-16 flex items-center justify-end px-4 md:px-8 lg:px-10 border-b ${isDarkMode ? 'border-slate-800' : 'border-slate-100'}`}>
+        <header className={`md:flex h-16 flex items-center justify-end px-4 md:px-8 lg:px-10 border-b ${isDarkMode ? 'border-slate-800' : 'border-slate-100'}`}>
           <button 
             onClick={onQuickAdd}
             className="flex items-center space-x-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium shadow-sm transition-all hover:shadow-md"
