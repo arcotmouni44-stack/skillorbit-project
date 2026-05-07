@@ -158,8 +158,19 @@ export default function Layout({ children, activeTab, setActiveTab, isDarkMode, 
 
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto flex flex-col">
+        {/* Mobile Header - Only visible on small screens */}
+      <div className="md:hidden flex items-center justify-between p-4 bg-slate-900 border-b border-slate-800">
+      <button onClick={() => setIsSidebarOpen(true)} className="p-2 text-slate-400">
+    <Menu size={24} />
+     </button>
+     <div className="flex items-center space-x-2">
+    <Orbit className="text-indigo-500 w-6 h-6" />
+    <span className="text-white font-bold">SkillOrbit</span>
+    </div>
+    <div className="w-8"></div> {/* Alignment*/}
+    </div>
         {/* Global Top Header */}
-        <header className={`h-16 flex items-center justify-end px-4 md:px-8 lg:px-10 border-b ${isDarkMode ? 'border-slate-800' : 'border-slate-100'}`}>
+        <header className={`hidden md:flex h-16 flex items-center justify-end px-4 md:px-8 lg:px-10 border-b ${isDarkMode ? 'border-slate-800' : 'border-slate-100'}`}>
           <button 
             onClick={onQuickAdd}
             className="flex items-center space-x-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium shadow-sm transition-all hover:shadow-md"
