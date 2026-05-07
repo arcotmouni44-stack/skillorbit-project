@@ -71,7 +71,7 @@ export default function Layout({ children, activeTab, setActiveTab, isDarkMode, 
   };
 
   return (
-    <div className={`flex h-screen overflow-hidden font-sans transition-colors duration-300 ${isDarkMode ? 'bg-slate-950 text-slate-100 dark' : 'bg-slate-50 text-slate-900'}`}>
+    <div className={`flex h-screen overflow-hidden  ${isDarkMode ? 'bg-slate-950 text-slate-100 dark' : 'bg-slate-50 text-slate-900'}`}>
       {/* Sidebar */}
       <aside className={`w-64 flex flex-col transition-colors duration-300 ${isDarkMode ? 'bg-slate-900 border-r border-slate-800' : 'bg-slate-900'}`}>
         <div className="p-6 flex items-center space-x-3 text-indigo-400">
