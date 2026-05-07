@@ -158,18 +158,6 @@ export default function Layout({ children, activeTab, setActiveTab, isDarkMode, 
 
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto flex flex-col">
-        {/* Mobile Header with Hamburger Menu */}
-<div className="md:hidden flex items-center justify-between p-4 bg-slate-900 border-b border-slate-800">
-  <div className="flex items-center space-x-2">
-    <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-       <Orbit className="text-white w-5 h-5" />
-    </div>
-    <span className="text-white font-bold text-xl">SkillOrbit</span>
-  </div>
-  <button className="p-2 text-slate-400 hover:bg-slate-800 rounded-lg">
-    <Menu size={24} />
-  </button>
-  </div>
         {/* Global Top Header */}
         <header className={`h-16 flex items-center justify-end px-4 md:px-8 lg:px-10 border-b ${isDarkMode ? 'border-slate-800' : 'border-slate-100'}`}>
           <button 
